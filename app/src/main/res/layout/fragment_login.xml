@@ -1,14 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.auth.LoginFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/login"/>
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:layout_marginTop="25sp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="45sp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:text="@string/email"/>
+
+    <EditText
+        android:id="@+id/input_email_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_hint"
+        android:layout_marginHorizontal="45sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="45sp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:text="@string/password"/>
+
+    <EditText
+        android:id="@+id/input_email_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password_hint"
+        android:layout_marginHorizontal="45sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:layout_marginHorizontal="45sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lato"
+        android:textSize="12sp"
+        android:text="@string/lupa_password"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato_bold"
+        android:padding="12sp"
+        android:layout_marginHorizontal="45sp"
+        android:text="@string/login"
+        />
+
+    <TextView
+        android:id="@+id/text_to_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        android:text="@string/login_statement" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:text="@string/copyright"
+        android:fontFamily="@font/lato"
+        android:textColor="@color/black"
+        />
+</LinearLayout>
