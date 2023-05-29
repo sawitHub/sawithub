@@ -3,8 +3,8 @@
     <string name="logo_sawithub">logo sawithub</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="login_statement">Belum punya akun? Daftar</string>
-    <string name="signup_statement">Sudah punya akun? Masuk</string>
+    <string name="login_statement">Belum punya akun?</string>
+    <string name="signup_statement">Sudah punya akun?</string>
     <string name="copyright">copyright2023 - sawithub</string>
     <string name="login">Login</string>
     <string name="email">email</string>
@@ -12,4 +12,5 @@
     <string name="lupa_password">lupa password</string>
     <string name="email_hint">input your email</string>
     <string name="password_hint">input your password</string>
+    <string name="daftar">Daftar</string>
 </resources>
