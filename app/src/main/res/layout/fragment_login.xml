@@ -38,6 +38,10 @@
         android:id="@+id/input_email_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="5sp"
+        android:fontFamily="@font/lato"
+        android:textSize="14sp"
         android:hint="@string/email_hint"
         android:layout_marginHorizontal="45sp"
         />
@@ -56,6 +60,10 @@
         android:id="@+id/input_email_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="5sp"
+        android:fontFamily="@font/lato"
+        android:textSize="14sp"
         android:hint="@string/password_hint"
         android:layout_marginHorizontal="45sp"
         />
