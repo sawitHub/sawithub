@@ -92,9 +92,11 @@
         android:text="@string/login_statement" />
 
     <TextView
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:textAlignment="center"
+        android:paddingBottom="10sp"
+        android:gravity="center|bottom"
         android:text="@string/copyright"
         android:fontFamily="@font/lato"
         android:textColor="@color/black"
