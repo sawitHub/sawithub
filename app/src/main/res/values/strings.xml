@@ -8,14 +8,18 @@
     <string name="copyright">copyright2023 - sawithub</string>
     <string name="login">Login</string>
     <string name="email">email</string>
+    <string name="nama">nama</string>
     <string name="password">password</string>
-    <string name="lupa_password">lupa password</string>
+    <string name="lupa_password">Lupa password?</string>
     <string name="email_hint">input your email</string>
+    <string name="name_hint">input your name</string>
     <string name="password_hint">input your password</string>
     <string name="daftar">Daftar</string>
+    <string name="masuk">Masuk</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_scan">Scan</string>
     <string name="title_notifications">Notifications</string>
+    <string name="signup">Sign Up</string>
 </resources>
