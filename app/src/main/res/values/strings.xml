@@ -21,5 +21,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_scan">Scan</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
     <string name="signup">Sign Up</string>
+    <string name="Edit_profil">Edit Profil</string>
+    <string name="tambahkan_profil">Tambahkan Foto</string>
+    <string name="username">Username</string>
+    <string name="user_email">User@email.com</string>
+    <string name="number_phone">081732155538900</string>
+    <string name="simpan">Simpan</string>
 </resources>
