@@ -29,4 +29,30 @@
     <string name="user_email">User@email.com</string>
     <string name="number_phone">081732155538900</string>
     <string name="simpan">Simpan</string>
+    <string name="produk_home">Produk Obat Yang Dicari</string>
+    <string name="gambar_bacaan">gambar bacaan</string>
+
+    <string-array name="name_artikel">
+        <item>Tips Cara Tanam Sawit Yang Baik Dan Benar</item>
+        <item>Cara Merawat Kelapa Sawit agar Berbuah Banyak</item>
+        <item>Supaya Tanaman Kelapa Sawit Subur, Ini Tips Ala Petani Desa</item>
+        <item>Cara Merawat Sawit Tanpa Pupuk</item>
+        <item>7 Cara Memelihara Kelapa Sawit Agar Berbuah Banyak</item>
+    </string-array>
+
+    <string-array name="img_artikel">
+        <item>https://disbun.kaltimprov.go.id/upload/artikel/medium_115884petani-sawit-kutim.JPG</item>
+        <item>https://pkt-group.com/sawitnotif/wp-content/uploads/2022/02/58d25e52a9feaa998f13c7911aeb2ed3-1.jpg</item>
+        <item>https://rakyatempatlawang.disway.id/upload/f86bbc6af541193cc0ef05ff740c37fb.jpg</item>
+        <item>https://komitmeniklim.id/wp-content/uploads/2021/05/Sawit-Bukan-Penyebab-Deforestasi.jpg</item>
+        <item>https://globalplanet.news/uploads/posts/20201118091023download-1.jpg</item>
+    </string-array>
+
+    <string-array name="url_artikel">
+        <item>https://disbun.kaltimprov.go.id/artikel/tips-cara-tanam-sawit-yang-baik-dan-benar</item>
+        <item>https://pkt-group.com/sawitnotif/cara-merawat-kelapa-sawit-agar-berbuah-banyak/</item>
+        <item>https://rakyatempatlawang.disway.id/read/640055/supaya-tanaman-kelapa-sawit-subur-ini-tips-ala-petani-desa</item>
+        <item>https://sinautani.com/cara-merawat-sawit-tanpa-pupuk/</item>
+        <item>http://globalplanet.news/ekbis/30252/7-cara-memelihara-kelapa-sawit-agar-berbuah-banyak</item>
+    </string-array>
 </resources>
