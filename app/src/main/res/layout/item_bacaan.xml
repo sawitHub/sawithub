@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5sp"
+    android:layout_gravity="center"
     card_view:cardCornerRadius="15sp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="230dp"
-        android:layout_height="190dp">
+        android:layout_gravity="center"
+        android:layout_height="210dp">
 
         <ImageView
             android:id="@+id/image_bacaan"
-            android:layout_height="130sp"
+            android:layout_height="150sp"
             android:layout_width="match_parent"
             android:contentDescription="@string/gambar_bacaan"
+            android:adjustViewBounds="true"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:src="@tools:sample/backgrounds/scenic"
@@ -26,7 +29,9 @@
             android:id="@+id/text_title_bacaan"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:layout_margin="15sp"
+            android:layout_margin="12sp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/black"
             app:layout_constraintTop_toBottomOf="@id/image_bacaan"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
