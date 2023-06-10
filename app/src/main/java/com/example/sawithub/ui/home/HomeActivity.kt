@@ -19,8 +19,8 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         bottomNav = binding.navView as BottomNavigationView
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {

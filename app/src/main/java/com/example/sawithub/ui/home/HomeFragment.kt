@@ -81,9 +81,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun showRecyclerListArtikel() {
-        rvTipsTrikAdapter.layoutManager = LinearLayoutManager(context,  LinearLayoutManager.HORIZONTAL, false)
+        rvArtikelBacaanAdapter.layoutManager = LinearLayoutManager(context,  LinearLayoutManager.HORIZONTAL, false)
         val listArtikelAdapter = ArtikelBacaanAdapter(listArtikel)
-        rvTipsTrikAdapter.adapter = listArtikelAdapter
+        rvArtikelBacaanAdapter.adapter = listArtikelAdapter
     }
 
     private fun bannerSlider() {
