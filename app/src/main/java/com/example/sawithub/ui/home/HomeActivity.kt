@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.sawithub.R
 import com.example.sawithub.databinding.ActivityHomeBinding
 import com.example.sawithub.ui.dashboard.DashboardFragment
+import com.example.sawithub.ui.profile.EditProfileActivity
 import com.example.sawithub.ui.profile.ProfileFragment
 import com.example.sawithub.ui.scan.ScanActivity
 
@@ -48,7 +49,8 @@ class HomeActivity : AppCompatActivity() {
                 }
                 R.id.navigation_scan -> {
                     val intent = Intent(this@HomeActivity, ScanActivity::class.java)
-                    launcherIntentCameraX.launch(intent)
+//                    launcherIntentCameraX.launch(intent)
+                    startActivity(intent)
                     true
                 }
                 R.id.navigation_dashboard -> {
