@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.sawithub.R
 import com.example.sawithub.databinding.ActivityHomeBinding
-import com.example.sawithub.ui.dashboard.DashboardFragment
+import com.example.sawithub.ui.riwayatKonsul.RiwayatKonsulFragment
 import com.example.sawithub.ui.profile.ProfileFragment
 import com.example.sawithub.ui.scan.ScanActivity
 
@@ -34,7 +34,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_dashboard -> {
-                    loadFragment(DashboardFragment())
+                    loadFragment(RiwayatKonsulFragment())
                     true
                 }
                 R.id.navigation_profile -> {

@@ -1,4 +1,4 @@
-package com.example.sawithub.ui.dashboard
+package com.example.sawithub.ui.riwayatKonsul
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.sawithub.databinding.FragmentDashboardBinding
 
-class DashboardFragment : Fragment() {
+class RiwayatKonsulFragment : Fragment() {
 
     private var _binding: FragmentDashboardBinding? = null
 
@@ -22,14 +22,14 @@ class DashboardFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+        val riwayatKonsulViewModel =
+            ViewModelProvider(this).get(RiwayatKonsulViewModel::class.java)
 
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
+        riwayatKonsulViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
