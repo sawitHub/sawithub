@@ -20,13 +20,26 @@
         android:theme="@style/Theme.Sawithub"
         tools:targetApi="31">
         <activity
+            android:name=".RoomChatActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.hasilScan.HasilScanActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.scan.ResultActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".ui.scan.ScanActivity"
             android:exported="false">

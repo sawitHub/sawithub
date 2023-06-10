@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import com.example.sawithub.R
 import com.example.sawithub.createFile
 import com.example.sawithub.databinding.ActivityScanBinding
+import com.example.sawithub.ui.hasilScan.HasilScanActivity
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -67,7 +68,6 @@ class ScanActivity : AppCompatActivity() {
                 REQUEST_CODE_PERMISSIONS
             )
         }
-
     }
 
     public override fun onResume() {
@@ -77,7 +77,6 @@ class ScanActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        cameraExecutor.shutdown()
     }
 
     private fun takePhoto() {
@@ -104,7 +103,9 @@ class ScanActivity : AppCompatActivity() {
                         "isBackCamera",
                         cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
                     )
-                    setResult(ResultActivity.CAMERA_X_RESULT, intent)
+                    setResult(HasilScanActivity.CAMERA_X_RESULT, intent)
+                    val moveHasilScan = Intent(this@ScanActivity,HasilScanActivity::class.java)
+                    startActivity(moveHasilScan)
                     finish()
                 }
             }
