@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.sawithub.R
 import com.example.sawithub.databinding.FragmentEditProfileBinding
-import com.example.sawithub.databinding.FragmentProfileBinding
 
 class EditProfileFragment : Fragment() {
     private var _binding: FragmentEditProfileBinding? = null
@@ -30,5 +28,4 @@ class EditProfileFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
 }
