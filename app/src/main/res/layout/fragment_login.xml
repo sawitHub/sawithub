@@ -59,7 +59,7 @@
         android:text="@string/password"/>
 
     <EditText
-        android:id="@+id/input_email_password"
+        android:id="@+id/input_password_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_lock"
@@ -67,20 +67,11 @@
         android:fontFamily="@font/lato"
         android:background="@drawable/custom_input"
         android:textSize="14sp"
+        android:inputType="textPassword"
         android:padding="12dp"
         android:hint="@string/password_hint"
         android:layout_marginHorizontal="45dp"
         />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="textEnd"
-        android:layout_marginHorizontal="45dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/lato"
-        android:textSize="12sp"
-        android:text="@string/lupa_password"/>
 
     <Button
         android:id="@+id/btn_login"
