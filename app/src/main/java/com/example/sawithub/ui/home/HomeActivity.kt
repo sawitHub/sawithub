@@ -2,7 +2,6 @@ package com.example.sawithub.ui.home
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -10,7 +9,7 @@ import com.example.sawithub.R
 import com.example.sawithub.databinding.ActivityHomeBinding
 import com.example.sawithub.ui.riwayatKonsul.RiwayatKonsulFragment
 import com.example.sawithub.ui.profile.ProfileFragment
-import com.example.sawithub.ui.scan.ScanActivity
+import com.example.sawithub.ui.scan.ScanFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -22,6 +21,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
         bottomNav = binding.navView as BottomNavigationView
+
         bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.navigation_home -> {
@@ -29,8 +29,10 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_scan -> {
-                    val intent = Intent(this@HomeActivity, ScanActivity::class.java)
-                    launcherIntentCameraX.launch(intent)
+                    val intent = Intent(this@HomeActivity, ScanFragment::class.java)
+//                    launcherIntentCameraX.launch(intent)
+                    loadFragment(ScanFragment())
+
                     true
                 }
                 R.id.navigation_dashboard -> {
@@ -56,9 +58,4 @@ class HomeActivity : AppCompatActivity() {
         transaction.commit()
     }
 
-    private val launcherIntentCameraX = registerForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) {
-
-    }
 }

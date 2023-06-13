@@ -1,180 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="?attr/actionBarSize"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".ui.home.HomeFragment"
+    >
 
-    <com.smarteist.autoimageslider.SliderView
-        android:id="@+id/banner_slider"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="15sp"
-        android:layout_marginHorizontal="15sp"
-        app:sliderAnimationDuration="600"
-        app:sliderAutoCycleDirection="back_and_forth"
-        app:sliderIndicatorAnimationDuration="600"
-        app:sliderIndicatorEnabled="true"
-        app:sliderIndicatorGravity="center_horizontal|bottom"
-        app:sliderIndicatorMargin="15dp"
-        app:sliderIndicatorOrientation="horizontal"
-        app:sliderIndicatorPadding="3dp"
-        app:sliderIndicatorRadius="2dp"
-        app:sliderIndicatorSelectedColor="#5A5A5A"
-        app:sliderIndicatorUnselectedColor="#FFF"
-        app:sliderScrollTimeInSec="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintStart_toEndOf="parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
+        tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/produk_dicari"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/produk_home"
-        android:fontFamily="@font/lato_bold"
-        android:textSize="16sp"
-        android:layout_marginVertical="12sp"
-        android:layout_marginHorizontal="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/banner_slider"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/banner_slider"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15sp"
+            android:layout_marginHorizontal="15sp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="parent"/>
 
-    <HorizontalScrollView
-        android:id="@+id/scroll_obat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginVertical="12sp"
-        android:layout_marginHorizontal="20sp"
-        android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/produk_dicari">
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/produk_dicari"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@string/produk_home"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="16sp"
+            android:layout_marginVertical="12sp"
+            android:layout_marginHorizontal="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/banner_slider"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_obat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="12sp"
+            android:layout_marginHorizontal="20sp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/produk_dicari">
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:text="GeeksforGeeks"
+                    android:padding="4dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/Co"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/white"
+                    android:padding="4dp"
+                    android:text="GeeksforGeeks"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:padding="4dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/white"
+                    android:text="GeeksforGeeks"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/Ha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:padding="4dp"
+                    android:layout_margin="10dp"
+                    android:backgroundTint="@color/white"
+                    android:text="GeeksforGeeks"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/Hah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:padding="4dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_margin="10dp"
+                    android:text="GeeksforGeeks"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text_tips_trik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tips dan Trik"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="16sp"
+            android:layout_marginVertical="12sp"
+            android:layout_marginHorizontal="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/scroll_obat"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_bacaan_data"
             android:layout_width="wrap_content"
-            android:orientation="horizontal" >
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_tips_trik"
+            tools:ignore="MissingConstraints"
+            />
 
-            <Button
-                android:id="@+id/C"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:text="GeeksforGeeks"
-                android:padding="4dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/text_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Artikel dan Bacaan"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="16sp"
+            android:layout_marginVertical="12sp"
+            android:layout_marginHorizontal="20sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/item_bacaan_data"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
 
-            <Button
-                android:id="@+id/Co"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/white"
-                android:padding="4dp"
-                android:text="GeeksforGeeks"
-                android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/text_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/L"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:padding="4dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/white"
-                android:text="GeeksforGeeks"
-                android:textColor="@color/black"/>
-
-            <Button
-                android:id="@+id/Ha"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:padding="4dp"
-                android:layout_margin="10dp"
-                android:backgroundTint="@color/white"
-                android:text="GeeksforGeeks"
-                android:textColor="@color/black"/>
-
-            <Button
-                android:id="@+id/Hah"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:padding="4dp"
-                android:backgroundTint="@color/white"
-                android:layout_margin="10dp"
-                android:text="GeeksforGeeks"
-                android:textColor="@color/black"/>
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
-
-    <TextView
-        android:id="@+id/text_tips_trik"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tips dan Trik"
-        android:fontFamily="@font/lato_bold"
-        android:textSize="16sp"
-        android:layout_marginVertical="12sp"
-        android:layout_marginHorizontal="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/scroll_obat"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/item_bacaan_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_tips_trik"
-        tools:ignore="MissingConstraints"
-    />
-
-    <TextView
-        android:id="@+id/text_article"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Artikel dan Bacaan"
-        android:fontFamily="@font/lato_bold"
-        android:textSize="16sp"
-        android:layout_marginVertical="12sp"
-        android:layout_marginHorizontal="20sp"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/item_bacaan_data"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/item_artikel_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_article"
-        tools:ignore="MissingConstraints"
-        />
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_artikel_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_article"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

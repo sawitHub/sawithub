@@ -31,6 +31,19 @@
     <string name="simpan">Simpan</string>
     <string name="produk_home">Produk Obat Yang Dicari</string>
     <string name="gambar_bacaan">gambar bacaan</string>
+    <string name="foto_hasil_scan">foto hasil scan</string>
+    <string name="nama_penyakit">Nama Penyakit</string>
+    <string name="sari_roti">Sari Roti</string>
+    <string name="jenis_penyakit">Jenis Penyakit</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="rekomendasi_penanganan">Rekomendasi Penanganan</string>
+    <string name="lorem_ipsum">Loreim inpsum de natanle djendned</string>
+    <string name="spasi">:</string>
+    <string name="scan_ulang">Scan Ulang</string>
+    <string name="konsul">Konsul</string>
+    <string name="ambil_foto">Ambil Foto</string>
+    <string name="scan">Scan</string>
+    <string name="preview_image">preview image</string>
 
     <string-array name="name_artikel">
         <item>Tips Cara Tanam Sawit Yang Baik Dan Benar</item>
