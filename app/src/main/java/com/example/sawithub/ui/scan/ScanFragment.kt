@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.sawithub.databinding.FragmentScanBinding
 import com.example.sawithub.ml.Model
@@ -40,6 +41,10 @@ class ScanFragment : Fragment() {
 
         binding.btnScanFoto.setOnClickListener{startCameraX()}
         binding.btnScanProses.setOnClickListener{
+            if(imageView == null) {
+                Toast.makeText(context, "Harap masukkan Foto Terlebih Dahulu", Toast.LENGTH_SHORT).show()
+            }
+
             var tensorImages = TensorImage(DataType.FLOAT32)
             tensorImages.load(imageView)
 

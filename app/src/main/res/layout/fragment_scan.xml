@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.scan.ScanFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,8 +13,8 @@
 
         <ImageView
             android:id="@+id/previewImage"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
@@ -25,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_place_holder"
-            android:contentDescription="preview image" />
+            android:contentDescription="@string/preview_image" />
 
         <Button
             android:id="@+id/btn_scan_foto"
@@ -208,12 +207,14 @@
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_marginHorizontal="30sp"
-            android:text="Konsul"
+            android:text="@string/konsul"
             android:padding="12sp"
             android:layout_marginTop="12sp"
+            android:layout_marginBottom="50sp"
             app:layout_constraintTop_toBottomOf="@id/isi_rekomendasi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
