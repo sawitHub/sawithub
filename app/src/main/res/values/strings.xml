@@ -41,6 +41,8 @@
     <string name="spasi">:</string>
     <string name="scan_ulang">Scan Ulang</string>
     <string name="konsul">Konsul</string>
+    <string name="ambil_foto">Ambil Foto</string>
+    <string name="scan">Scan</string>
 
     <string-array name="name_artikel">
         <item>Tips Cara Tanam Sawit Yang Baik Dan Benar</item>

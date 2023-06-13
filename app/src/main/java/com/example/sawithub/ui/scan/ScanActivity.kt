@@ -7,12 +7,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.sawithub.R
 import com.example.sawithub.createFile
 import com.example.sawithub.databinding.ActivityScanBinding
-import com.example.sawithub.ui.hasilScan.HasilScanActivity
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
@@ -60,23 +58,11 @@ class ScanActivity : AppCompatActivity() {
                 else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
         }
-
-        if (!allPermissionGranted()) {
-            ActivityCompat.requestPermissions(
-                this,
-                REQUIRED_PERMISSIONS,
-                REQUEST_CODE_PERMISSIONS
-            )
-        }
     }
 
     public override fun onResume() {
         super.onResume()
         startCamera()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 
     private fun takePhoto() {
@@ -103,9 +89,7 @@ class ScanActivity : AppCompatActivity() {
                         "isBackCamera",
                         cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
                     )
-                    setResult(HasilScanActivity.CAMERA_X_RESULT, intent)
-                    val moveHasilScan = Intent(this@ScanActivity,HasilScanActivity::class.java)
-                    startActivity(moveHasilScan)
+                    setResult(ScanFragment.CAMERA_X_RESULT, intent)
                     finish()
                 }
             }

@@ -25,8 +25,8 @@
 
     <fragment
         android:id="@+id/navigation_scan"
-        android:name="com.example.sawithub.ui.scan.ScanActivity"
+        android:name="com.example.sawithub.ui.scan.ScanFragment"
         android:label="@string/title_scan"
-        tools:layout="@layout/activity_scan" />
+        tools:layout="@layout/fragment_scan" />
 
 </navigation>
