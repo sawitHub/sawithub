@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -82,9 +81,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun showRecyclerListArtikel() {
-        rvTipsTrikAdapter.layoutManager = LinearLayoutManager(context,  LinearLayoutManager.HORIZONTAL, false)
+        rvArtikelBacaanAdapter.layoutManager = LinearLayoutManager(context,  LinearLayoutManager.HORIZONTAL, false)
         val listArtikelAdapter = ArtikelBacaanAdapter(listArtikel)
-        rvTipsTrikAdapter.adapter = listArtikelAdapter
+        rvArtikelBacaanAdapter.adapter = listArtikelAdapter
     }
 
     private fun bannerSlider() {

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.scan.ScanFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/previewImage"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_place_holder"
+            android:contentDescription="@string/preview_image" />
+
+        <Button
+            android:id="@+id/btn_scan_foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ambil_foto"
+            android:paddingHorizontal="15sp"
+            android:layout_marginStart="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/previewImage"
+            />
+
+        <Button
+            android:id="@+id/btn_scan_proses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan"
+            android:paddingHorizontal="40sp"
+            android:layout_marginHorizontal="60sp"
+            app:layout_constraintStart_toEndOf="@+id/btn_scan_foto"
+            app:layout_constraintTop_toBottomOf="@+id/previewImage"
+            />
+
+        <TextView
+            android:id="@+id/title_penyakit"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="12sp"
+            android:layout_marginHorizontal="20sp"
+            android:text="@string/nama_penyakit"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"
+            app:layout_constraintTop_toBottomOf="@+id/btn_scan_foto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="15sp"
+            app:layout_constraintTop_toBottomOf="@id/title_penyakit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TableLayout
+                android:layout_marginTop="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent">
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  >
+                    <TextView
+                        android:layout_column="1"
+                        android:text="@string/nama_penyakit"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato"
+                        android:textSize="18sp"
+                        android:text="@string/spasi"
+                        android:paddingHorizontal="20sp"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/nama_penyakit"
+                        android:layout_column="3"
+                        android:text="@string/sari_roti"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato"
+                        android:textSize="18sp"/>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"  >
+                    <TextView
+                        android:layout_column="1"
+                        android:text="@string/jenis_penyakit"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato"
+                        android:textSize="17sp"/>
+
+                    <TextView
+                        android:layout_column="2"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato"
+                        android:textSize="18sp"
+                        android:text="@string/spasi"
+                        android:paddingHorizontal="20sp"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/nama_jenis_penyakit"
+                        android:layout_column="3"
+                        android:text="@string/sari_roti"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/lato"
+                        android:textSize="17sp"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/deskripsi_penyakit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginHorizontal="20sp"
+            android:textSize="20sp"
+            android:text="@string/deskripsi"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table_layout"
+            />
+
+        <TextView
+            android:id="@+id/isi_deskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato"
+            android:text="@string/lorem_ipsum"
+            android:layout_marginHorizontal="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deskripsi_penyakit"
+            />
+
+        <TextView
+            android:id="@+id/title_rekomendasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:layout_marginHorizontal="20sp"
+            android:textSize="20sp"
+            android:text="@string/rekomendasi_penanganan"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/isi_deskripsi"
+            />
+
+        <TextView
+            android:id="@+id/isi_rekomendasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato"
+            android:text="@string/lorem_ipsum"
+            android:layout_marginHorizontal="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_rekomendasi"
+            />
+
+        <Button
+            android:id="@+id/button_konsul"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="30sp"
+            android:text="@string/konsul"
+            android:padding="12sp"
+            android:layout_marginTop="12sp"
+            android:layout_marginBottom="50sp"
+            app:layout_constraintTop_toBottomOf="@id/isi_rekomendasi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
