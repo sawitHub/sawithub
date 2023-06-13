@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.sawithub.R
-import com.example.sawithub.databinding.FragmentHomeBinding
 import com.example.sawithub.databinding.FragmentProfileBinding
-import com.example.sawithub.ui.auth.SignInFragment
 
 class ProfileFragment : Fragment() {
 
