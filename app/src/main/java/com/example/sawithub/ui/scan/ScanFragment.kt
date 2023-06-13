@@ -1,6 +1,5 @@
 package com.example.sawithub.ui.scan
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -15,11 +14,9 @@ import com.example.sawithub.databinding.FragmentScanBinding
 import com.example.sawithub.ml.Model
 import com.example.sawithub.rotateFile
 import org.tensorflow.lite.DataType
-import org.tensorflow.lite.support.common.ops.NormalizeOp
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
-import org.tensorflow.lite.support.image.ops.TransformToGrayscaleOp
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.io.File
 
@@ -35,15 +32,15 @@ class ScanFragment : Fragment() {
     ): View? {
         _binding = FragmentScanBinding.inflate(inflater, container, false)
 
-        var labels = requireActivity().application.assets.open("labels.txt").bufferedReader().readLines()
+        val labels = requireActivity().application.assets.open("labels.txt").bufferedReader().readLines()
 
-        var imageProcessor = ImageProcessor.Builder()
-            .add(ResizeOp(448,224, ResizeOp.ResizeMethod.BILINEAR))
+        val imageProcessor = ImageProcessor.Builder()
+            .add(ResizeOp(224,224, ResizeOp.ResizeMethod.BILINEAR))
             .build()
 
         binding.btnScanFoto.setOnClickListener{startCameraX()}
         binding.btnScanProses.setOnClickListener{
-            var tensorImages = TensorImage(DataType.UINT8)
+            var tensorImages = TensorImage(DataType.FLOAT32)
             tensorImages.load(imageView)
 
             tensorImages = imageProcessor.process(tensorImages)
