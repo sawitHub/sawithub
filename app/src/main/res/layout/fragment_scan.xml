@@ -107,7 +107,7 @@
                     <TextView
                         android:id="@+id/nama_penyakit"
                         android:layout_column="3"
-                        android:text="@string/sari_roti"
+                        android:text="@string/belum_terdeteksi"
                         android:textColor="@color/black"
                         android:fontFamily="@font/lato"
                         android:textSize="18sp"/>
@@ -136,7 +136,7 @@
                     <TextView
                         android:id="@+id/nama_jenis_penyakit"
                         android:layout_column="3"
-                        android:text="@string/sari_roti"
+                        android:text="@string/belum_terdeteksi"
                         android:textColor="@color/black"
                         android:fontFamily="@font/lato"
                         android:textSize="17sp"/>
@@ -167,7 +167,7 @@
             android:textSize="17sp"
             android:textColor="@color/black"
             android:fontFamily="@font/lato"
-            android:text="@string/lorem_ipsum"
+            android:text="@string/belum_terdeteksi"
             android:layout_marginHorizontal="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/deskripsi_penyakit"
@@ -196,7 +196,7 @@
             android:textSize="17sp"
             android:textColor="@color/black"
             android:fontFamily="@font/lato"
-            android:text="@string/lorem_ipsum"
+            android:text="@string/belum_terdeteksi"
             android:layout_marginHorizontal="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/title_rekomendasi"
