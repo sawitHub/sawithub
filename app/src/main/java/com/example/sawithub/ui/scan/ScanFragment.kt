@@ -46,12 +46,9 @@ class ScanFragment : Fragment() {
 
         binding.btnScanFoto.setOnClickListener{startCameraX()}
         binding.btnScanProses.setOnClickListener{
-
             var tensorImages = TensorImage(DataType.FLOAT32)
             tensorImages.load(imageView)
-
             tensorImages = imageProcessor.process(tensorImages)
-
             val model = Model.newInstance(requireContext())
 
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
