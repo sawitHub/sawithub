@@ -1,13 +1,14 @@
-package com.example.sawithub.data.remote
+package com.example.sawithub.network
 
+import com.example.sawithub.data.remote.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class ApiConfig {
+class ApiFetchData {
     companion object{
-        private const val BASEURL = "https://api-user-sawit-hub-iyjhtisjaa-et.a.run.app "
+        private const val BASEURL = "https://sawithub.github.io/user-sawitHub/"
         fun getRetrofitClientInstance() : ApiService {
             val loggingInterceptor =
                 HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)

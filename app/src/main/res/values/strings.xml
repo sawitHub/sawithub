@@ -46,6 +46,7 @@
     <string name="preview_image">preview image</string>
     <string name="Logout">LOGOUT</string>
     <string name="title_konsul">Riwayat Konsul</string>
+    <string name="obat_daun_kelapa_sawit">Obat Daun Kelapa Sawit</string>
 
     <string-array name="name_artikel">
         <item>Tips Cara Tanam Sawit Yang Baik Dan Benar</item>

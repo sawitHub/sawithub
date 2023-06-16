@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     android:layout_margin="5sp"
     android:layout_gravity="center"
-    card_view:cardCornerRadius="15sp">
+    card_view:cardCornerRadius="15sp"
+    card_view:cardElevation="2dp"
+   >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"

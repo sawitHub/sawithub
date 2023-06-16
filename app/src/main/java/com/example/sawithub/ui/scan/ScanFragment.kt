@@ -5,20 +5,25 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.sawithub.data.response.PenyakitResponseItem
 import com.example.sawithub.databinding.FragmentScanBinding
 import com.example.sawithub.ml.Model
+import com.example.sawithub.network.ApiFetchData
 import com.example.sawithub.rotateFile
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.support.image.ImageProcessor
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.support.image.ops.ResizeOp
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.File
 
 
@@ -41,15 +46,9 @@ class ScanFragment : Fragment() {
 
         binding.btnScanFoto.setOnClickListener{startCameraX()}
         binding.btnScanProses.setOnClickListener{
-            if(imageView == null) {
-                Toast.makeText(context, "Harap masukkan Foto Terlebih Dahulu", Toast.LENGTH_SHORT).show()
-            }
-
             var tensorImages = TensorImage(DataType.FLOAT32)
             tensorImages.load(imageView)
-
             tensorImages = imageProcessor.process(tensorImages)
-
             val model = Model.newInstance(requireContext())
 
             val inputFeature0 = TensorBuffer.createFixedSize(intArrayOf(1, 224, 224, 3), DataType.FLOAT32)
@@ -66,6 +65,8 @@ class ScanFragment : Fragment() {
             }
 
             binding.namaPenyakit.setText(labels[maxIdx])
+            binding.namaJenisPenyakit.setText(labels[maxIdx])
+            scanResultData(labels[maxIdx])
             model.close()
         }
 
@@ -96,9 +97,41 @@ class ScanFragment : Fragment() {
         }
     }
 
+    private fun scanResultData(namaPenyakit: String) {
+        val getData = ApiFetchData.getRetrofitClientInstance().getPenyakit()
+        getData.enqueue(object: Callback<List<PenyakitResponseItem>> {
+            override fun onResponse(
+                call: Call<List<PenyakitResponseItem>>,
+                response: Response<List<PenyakitResponseItem>>
+            ) {
+               if(response.isSuccessful) {
+                   val responseItem = response.body()
+                   if(responseItem != null) {
+                       getPenyakitData(responseItem, namaPenyakit)
+                   }
+               }
+            }
+
+            override fun onFailure(call: Call<List<PenyakitResponseItem>>, t: Throwable) {
+                Log.e(TAG, "onFailure: ${t.message}")
+            }
+        })
+    }
+
+    private fun getPenyakitData(responseItem: List<PenyakitResponseItem>, namaPenyakit: String) {
+        for(item in responseItem) {
+            if(item.namaPenyakit == namaPenyakit) {
+                binding.namaPenyakit.text = item.namaPenyakit
+                binding.isiDeskripsi.text = item.detail.deskripsi
+                binding.isiRekomendasi.text = item.detail.penanganan
+            }
+        }
+    }
+
 
     companion object {
         const val CAMERA_X_RESULT = 200
+        const val TAG = "Scan Fragment"
     }
 
     override fun onDestroy() {

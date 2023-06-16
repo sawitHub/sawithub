@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import com.example.sawithub.R
 import com.example.sawithub.databinding.FragmentLoginBinding
 import com.example.sawithub.ui.home.HomeActivity
+import com.example.sawithub.ui.home.HomeFragment
 
 class LoginFragment : Fragment(), View.OnClickListener {
     private var _binding: FragmentLoginBinding? = null
@@ -23,7 +24,6 @@ class LoginFragment : Fragment(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
         return root
@@ -35,7 +35,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
         textToSignIn.setOnClickListener(this)
         binding.apply {
             btnLogin.setOnClickListener {
-                initView()
+                startActivity(Intent(context, HomeActivity::class.java))
             }
         }
     }

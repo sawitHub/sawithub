@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.sawithub.R
 import com.example.sawithub.createFile
@@ -46,6 +47,14 @@ class ScanActivity : AppCompatActivity() {
 
         binding = ActivityScanBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if (!allPermissionGranted()) {
+            ActivityCompat.requestPermissions(
+                this,
+                REQUIRED_PERMISSIONS,
+                REQUEST_CODE_PERMISSIONS
+            )
+        }
 
         flashMode()
 

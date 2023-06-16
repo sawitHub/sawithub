@@ -1,11 +1,11 @@
 package com.example.sawithub.data.remote
 
 import com.example.sawithub.data.response.LoginResponse
+import com.example.sawithub.data.response.PenyakitResponse
+import com.example.sawithub.data.response.PenyakitResponseItem
 import com.example.sawithub.data.response.RegisterResponse
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -23,4 +23,7 @@ interface ApiService {
         @Field("Email") Email: String,
         @Field("Password") Password: String
     ): Call<LoginResponse>
+
+    @GET("/user-sawitHub/penyakitSawit.json")
+    fun getPenyakit(): Call<List<PenyakitResponseItem>>
 }
