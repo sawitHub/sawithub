@@ -25,8 +25,8 @@
     <string name="signup">Sign Up</string>
     <string name="Edit_profil">Edit Profil</string>
     <string name="tambahkan_profil">Tambahkan Foto</string>
-    <string name="username">Username</string>
-    <string name="user_email">User@email.com</string>
+    <string name="username">Yusrian Asghany</string>
+    <string name="user_email">Yusrian@gmail.com</string>
     <string name="number_phone">081732155538900</string>
     <string name="simpan">Simpan</string>
     <string name="produk_home">Produk Obat Yang Dicari</string>
@@ -44,7 +44,11 @@
     <string name="ambil_foto">Ambil Foto</string>
     <string name="scan">Scan</string>
     <string name="preview_image">preview image</string>
+    <string name="Logout">LOGOUT</string>
+    <string name="title_konsul">Riwayat Konsul</string>
     <string name="obat_daun_kelapa_sawit">Obat Daun Kelapa Sawit</string>
+    <string name="belum_terdeteksi">Belum Terdeteksi</string>
+    <string name="edit_foto">Edit Foto</string>
 
     <string-array name="name_artikel">
         <item>Tips Cara Tanam Sawit Yang Baik Dan Benar</item>

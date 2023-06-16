@@ -64,7 +64,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
             }
         }
         initObserver()
-    }
+    }   
 
     fun initObserver() {
         loginViewModel.userLogin.observe(viewLifecycleOwner){
@@ -76,6 +76,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
             }
             else {
                 Toast.makeText(requireActivity(), "login gagal", Toast.LENGTH_SHORT).show()
+                requireActivity().finish()
             }
         }
     }

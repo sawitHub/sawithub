@@ -35,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
 
                     true
                 }
-                R.id.navigation_dashboard -> {
+                R.id.navigation_konsul -> {
                     loadFragment(RiwayatKonsulFragment())
                     true
                 }
