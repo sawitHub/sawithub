@@ -18,8 +18,6 @@ class ResultActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
-
-
     companion object {
         const val CAMERA_X_RESULT = 200
     }

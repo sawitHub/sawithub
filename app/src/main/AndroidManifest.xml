@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-feature android:name="android.hardware.camera" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -14,15 +15,14 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher_sawithub"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_sawithub_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/Theme.Sawithub"
         tools:targetApi="31">
-
         <activity
-        android:name=".ui.profile.EditProfileActivity"
-        android:exported="false">
+            android:name=".ui.profile.EditProfileActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

@@ -44,6 +44,7 @@
     <string name="ambil_foto">Ambil Foto</string>
     <string name="scan">Scan</string>
     <string name="preview_image">preview image</string>
+    <string name="obat_daun_kelapa_sawit">Obat Daun Kelapa Sawit</string>
 
     <string-array name="name_artikel">
         <item>Tips Cara Tanam Sawit Yang Baik Dan Benar</item>
